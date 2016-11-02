@@ -16,12 +16,12 @@ Node:
 	``` rethinkdb --bind all & ```
 	
 ### go to rethinkdb dashboard in browser
-	adbXX.cs.appstate.edu:8080 (replace XX with your virtual machine number)
+* adbXX.cs.appstate.edu:8080 (replace XX with your virtual machine number)
 	
-click on data explorer tab, copy and paste the create table command
+* click on data explorer tab, copy and paste the create table command
 ``` r.db('test').tableCreate('restaurants') ```
 	
-copy and paste insert script (all at once)
+### copy and paste insert script (all at once)
 ```
 r.table('restaurants').insert([
 	{address: {building: 1007, coord: [-73.856077, 40.848447], street: 'Morris Park Ave', zipcode: 10462}, borough: 'Bronx', cuisine: 'Bakery', grades: [{date: Date(1234567890000), grade: 'A', score: 2}, {date: Date(1378857600000), grade: 'A', score: 6}, {date: Date(1358985600000), grade: 'A', score: 10}, {date: Date(1322006400000), grade: 'A', score: 9}, {date: Date(1299715200000), grade: 'B', score: 14}], name: 'Morris Park Bake Shop', restaurant_id: 30075445},
@@ -52,5 +52,5 @@ r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
 
 })
 ```
-start real-time feed
+### start real-time feed
 ``` node realtime_feed.js ```
