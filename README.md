@@ -3,8 +3,10 @@
 ## make a rethinkdb directory
 ``` mkdir rethinkdb ```
 
-### install node and rethinkdb (one line at a time)
-  ``` curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get install -y nodejs && npm install rethinkdb ```
+### install node and rethinkdb 
+Rethink: ``` source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list && sudo apt-get update && sudo apt-get install rethinkdb ```
+
+Node: ``` curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get install -y nodejs && npm install rethinkdb ```
 
 ### start-up rethinkdb
 	``` rethinkdb --bind all & ```
