@@ -21,6 +21,8 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get i
 
 ### Start-up rethinkdb
 ``` rethinkdb --bind all & 2&> /dev/null```
+
+* Note, kill this process at the end of the lab
 	
 ### Go to rethinkdb dashboard in browser
 * adbXX.cs.appstate.edu:8080 (replace XX with your virtual machine number)
