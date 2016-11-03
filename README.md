@@ -74,9 +74,12 @@ In the terminal with the real time feed, as you change the state of the database
 ``` r.table('restaurants').filter({"address":{"zipcode":11225}}) ```
 
 * Query restaurants using a nested collection
+
 All restaurants that have any score of 15 or higher:
 
-``` r.table('restaurants').filter(r.row('grades').contains(function(product){return product('score').gt(15);})) ```
+``` 
+r.table('restaurants').filter(r.row('grades').contains(function(product){return product('score').gt(15);})) 
+```
 
 All restaurants that have a grade of exactly Z:
 
