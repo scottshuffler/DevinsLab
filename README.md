@@ -19,10 +19,12 @@ Node:
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get install -y nodejs && npm install rethinkdb 
 ```
 
-### Start-up rethinkdb
+### SSH in to your adb machine and start-up rethinkdb
 ``` rethinkdb --bind all & 2&> /dev/null```
 
 * Note, kill this process at the end of the lab
+
+```  sudo pkill rethink ```
 	
 ### Go to rethinkdb dashboard in browser
 * adbXX.cs.appstate.edu:8080 (replace XX with your virtual machine number)
