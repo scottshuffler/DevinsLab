@@ -107,7 +107,16 @@ r.table('restaurants').insert([{address: {building: 2780, coord: [-73.9824199999
 
 * Insert a new grade to existing restaurant
 
-``` r.table('restaurants').get(40356018)('grades').append({date:Date(), grade: 'B', score: 9}) ```
+``` 
+var newGrade = {
+    date: Date(),
+    grade: 'B',
+    score: 9
+};
+r.table('restaurants').get(40356018).update(
+    {grades: r.row('grades').append(newGrade)}
+) 
+```
 
 * Update a row
 
