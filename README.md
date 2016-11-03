@@ -69,6 +69,10 @@ You should see any state changes of the database reflected in your terminal wind
 
 ``` r.table('restaurants').get(30075445) ```
 
+* All grades of a specific restaurant
+
+``` r.table('restaurants').get(40356018)('grades') ```
+
 * Query restaurants using top level field. All restaurants in Brooklyn
 
 ``` r.table('restaurants').filter(r.row('borough').eq('Brooklyn')) ```
@@ -93,14 +97,18 @@ r.table('restaurants').filter(r.row('grades').contains(function(product){return 
 
 * Delete a restaurant by restauraunt ID
 
-``` r.table('restaurants').filter(r.row('restaurant_id').eq(40356018)).delete() ```
+``` r.table('restaurants').get(40356018).delete() ```
 
 * Insert a single restaurant
 
 ``` 
-r.table('restaurants').insert([{address: {building: 2780, coord: [-73.98241999999999, 40.579505], street: 'Stillwell Avenue', zipcode: 11224}, borough: 'Brooklyn', cuisine: 'American' , grades: [{date: Date(1402358400000), grade: 'A', score: 5}, {date: Date(1370390400000), grade: 'A', score: 7}, {date: Date(1334275200000), grade: 'A', score: 12}, {date: Date(1318377600000), grade: 'A', score: 12}], name: 'Riviera Caterer', restaurant_id: 40356018}])
+r.table('restaurants').insert([{address: {building: 2780, coord: [-73.98241999999999, 40.579505], street: 'Stillwell Avenue', zipcode: 11224}, borough: 'Brooklyn', cuisine: 'American' , grades: [{date: Date(1402358400000), grade: 'A', score: 5}, {date: Date(1370390400000), grade: 'A', score: 7}, {date: Date(1334275200000), grade: 'A', score: 12}, {date: Date(1318377600000), grade: 'A', score: 12}], name: 'Riviera Caterer', id: 40356018}])
 ```
+
+* Insert a new grade to existing restaurant
+
+``` r.table('restaurants').get(40356018)('grades').append({date:Date(), grade: 'B', score: 9}) ```
 
 * Update a row
 
-``` r.table('restaurants').filter(r.row('restaurant_id').eq(40356018)).update({borough:"Manhattan"}) ```
+``` r.table('restaurants').get(40356018).update({borough:"Manhattan"}) ```
