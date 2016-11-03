@@ -1,6 +1,7 @@
 # RethinkDB Setup
 * You will need the browser and terminal
 * If you're on a laptop you will need to be on a lab machine or you will not be able to complete the lab
+* This document is online at: https://github.com/sinkdb/RethinkDB
 
 ## Make a rethinkdb directory
 ``` mkdir rethinkdb && cd rethinkdb```
