@@ -29,7 +29,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get i
 
 ``` r.db('test').tableCreate('restaurants') ```
 	
-* Copy and paste insert script (all at once)
+* Copy and paste insert script
 ```
 r.table('restaurants').insert([
     {address: {building: 1007, coord: [-73.856077, 40.848447], street: 'Morris Park Ave', zipcode: 10462}, borough: 'Bronx', cuisine: 'Bakery', grades: [{date: Date(1234567890000), grade: 'A', score: 2}, {date: Date(1378857600000), grade: 'A', score: 6}, {date: Date(1358985600000), grade: 'A', score: 10}, {date: Date(1322006400000), grade: 'A', score: 9}, {date: Date(1299715200000), grade: 'B', score: 14}], name: 'Morris Park Bake Shop', id: 30075445},
