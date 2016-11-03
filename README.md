@@ -3,7 +3,7 @@
 * If you're on a laptop you will need to be on a lab machine or you will not be able to complete the lab
 * This document is online at: https://github.com/sinkdb/RethinkDB
 
-## Make a rethinkdb directory
+## SSH in to your adb machine and make a rethinkdb directory
 ``` mkdir rethinkdb && cd rethinkdb```
 
 ### Install node and rethinkdb 
@@ -19,7 +19,7 @@ Node:
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get install -y nodejs && npm install rethinkdb 
 ```
 
-### SSH in to your adb machine and start-up rethinkdb
+### Start-up rethinkdb
 ``` rethinkdb --bind all & 2&> /dev/null```
 
 * Note, kill this process at the end of the lab
