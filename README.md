@@ -24,7 +24,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get i
 
 * Note, kill this process at the end of the lab
 
-```  sudo pkill rethink ```
+```  sudo pkill rethinkdb ```
 	
 ### Go to rethinkdb dashboard in browser
 * adbXX.cs.appstate.edu:8080 (replace XX with your virtual machine number)
