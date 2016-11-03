@@ -59,7 +59,7 @@ r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
 ``` node realtime_feed.js ```
 
 ### Back in the data-explorer tab, run these queries
-In the terminal with the real time feed, as you change the state of the database, you should see these changes reflected
+You should see any state changes of the database reflected in your terminal window running realtime_feed.js
 
 * Display all documents
 
